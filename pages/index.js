@@ -8,7 +8,7 @@ export default function Home() {
   const featuredEvents = getFeaturedEvents();
   console.log("featuredEvents", featuredEvents);
   return (
-    <div>
+    <div className={styles.container}>
       {featuredEvents.map((event) => (
         <EventCard event={event} key={event.id} />
       ))}
