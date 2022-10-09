@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./EventCard.module.css";
+import Button from "./ui/Button";
 
 const EventCard = ({ event }) => {
   const options = { year: "numeric", month: "long", day: "numeric" };
@@ -9,6 +10,7 @@ const EventCard = ({ event }) => {
     options
   );
   const formattedLocation = event.location.replaceAll(", ", "\n");
+  const link = `/events/${event.id}`;
   return (
     <div className={styles.cardContainer}>
       <img className={styles.image} src={"/" + event.image} alt={event.title} />
@@ -20,7 +22,7 @@ const EventCard = ({ event }) => {
             <div className={styles.address}>{formattedLocation}</div>
           </div>
           <div>
-            <Link href={`/events/${event.id}`}> Know more</Link>
+            <Button link={link}> Explore Event</Button>
           </div>
         </div>
       </div>
