@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./EventCard.module.css";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
+import DateIcon from "../icons/DateIcon";
 
 const EventCard = ({ event }) => {
   const options = { year: "numeric", month: "long", day: "numeric" };
@@ -18,6 +19,7 @@ const EventCard = ({ event }) => {
         <div className={styles.rightBlock}>
           <div className={styles.eventDetails}>
             <h1 className={styles.title}>{event.title}</h1>
+            <DateIcon />
             <div className={styles.address}>{formattedDate}</div>
             <div className={styles.address}>{formattedLocation}</div>
           </div>
