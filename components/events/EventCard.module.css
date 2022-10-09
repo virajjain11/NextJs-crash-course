@@ -8,8 +8,26 @@
   background-color: #fff;
   display: flex;
   border-radius: 8px;
-  width: 900px;
+  width: 800px;
   height: 300px;
   margin: 20px auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.rightBlock {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+.address {
+  color: #a6a6a6;
+  margin-bottom: 10px;
+}
+
+.eventDetails {
 }

@@ -13,13 +13,15 @@ const EventCard = ({ event }) => {
     <div className={styles.cardContainer}>
       <img className={styles.image} src={"/" + event.image} alt={event.title} />
       <div>
-        <div>
-          <h1>{event.title}</h1>
-          <div>{formattedDate}</div>
-          <div>{formattedLocation}</div>
-        </div>
-        <div>
-          <Link href={`/events/${event.id}`}> Know more</Link>
+        <div className={styles.rightBlock}>
+          <div className={styles.eventDetails}>
+            <h1 className={styles.title}>{event.title}</h1>
+            <div className={styles.address}>{formattedDate}</div>
+            <div className={styles.address}>{formattedLocation}</div>
+          </div>
+          <div>
+            <Link href={`/events/${event.id}`}> Know more</Link>
+          </div>
         </div>
       </div>
     </div>
